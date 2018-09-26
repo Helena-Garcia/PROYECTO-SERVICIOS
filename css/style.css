@@ -24,6 +24,7 @@ font-weight: normal;
 }
 
 h2.etiqueta {
+    position: relative;
     font-family: suecaslabbold;
     font-size: 16px;
     line-height: 20px;
@@ -32,6 +33,20 @@ h2.etiqueta {
     display: inline-block;
     padding: 6px;
     margin-bottom: 20px;
+}
+h2.etiqueta::after {
+    content: " ";
+    width: 15px;
+    height: 15px;
+    bottom: -8px;
+    background: yellow;
+    transform: rotate(45deg);
+    position: absolute;
+    /* border: 1px solid #777; */
+    border-top: none;
+    /* left: 0; */
+    left: calc(50% - 7.5px);
+    z-index: 0;
 }
 p.texto {
     font-family: suecaslab;
